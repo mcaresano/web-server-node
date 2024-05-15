@@ -1,0 +1,76 @@
+
+
+Aquí cubriremos varios temas como: 
+
+Uso y configuración de Express
+Servir contenido estático
+Servir contenido dinámico
+Template engines
+Handebars
+Parciales
+Variables
+Despliegues en Heroku
+Hacer carpetas públicas en la web
+Desplegar aplicaciones de Angular y React
+
+-------------------------------------------
+Web server
+Servidor web que sirve contenido http.
+Bases con parte basica de node. y con express.
+
+1- crear carpeta y agregarla a node
+2- >npm init -y (crear el package.json)
+3- crear el app.js + console.log y ejecutarlo con >node app
+4- Buscar en Node en la doc hhtp -> create server https://nodejs.org/en
+6- En el app.js crear el servidor.
+7- Ejecutar nodemon app para tenerlo funcionando.
+8- >nodemon app
+
+ver el paquete http en nodejs v14.15  nodejs.org
+Crear el servidor en app.js
+Formas de respuesta del res y estado.
+
+Vista de express -> https://www.npmjs.com/package/express
+> npm i express
+
+
+Handlebars -> paquete te npm para el manejo de vistas dinámicas.
+para el manejo con express ir hasta el link de hbs y seguir de ahi la instalación
+> npm install hbs
+
+se maneja dentro de la carpeta views y dentro de la misma se agregan los partials.
+al agregar el path con la llamada se agregan las props que correspondan.
+y dentro de cada view se van a mostrar con {{>nombreProp}}
+
+
+Para poder subirlo a un hosting hay que ver las variables de entorno
+Ver que el puerto no debe ser estático. depende del servidor en el que se suba.
+Se necesita el paquete dotenv para configurar la variable de entorno del puerto
+> npm i dotenv
+
+>dotenv
+.env
+- Confguracion del puerto en app.js
+
+Se crea en la raiz el .env donde van a tener las variables de entorno
+Se crea el PORT = 8081
+en el app.js se agrega el paquete que es desde donde se utiliza
+require('dotenv').config()
+port = process.env.PORT
+
+Si el hosting no provee el puerto, se toma el que se agrega en el .env de forma predeterminada
+
+se agrega en el package.json el acceso a "start":"node app.js" 
+En caso que se quiera ver solo en dev se agrega al final -dev.
+
+ahora se ejecuta la aplicación con >npm start
+
+
+.gitignore
+
+Para ignorar archivos que se suben a git y que no tengan seguimiento se agrega el .gitignore y se agregan los que no necesitamos subir.
+Se agregan tanto archivos como directorios
+
+
+
+Desplegar aplicación en Railway
