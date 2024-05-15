@@ -51,6 +51,7 @@ Se necesita el paquete dotenv para configurar la variable de entorno del puerto
 >dotenv
 .env
 - Confguracion del puerto en app.js
+- Configuracion de inicio del proyecto en el package.json para el manejo de "start"
 
 Se crea en la raiz el .env donde van a tener las variables de entorno
 Se crea el PORT = 8081
@@ -72,5 +73,4 @@ Para ignorar archivos que se suben a git y que no tengan seguimiento se agrega e
 Se agregan tanto archivos como directorios
 
 
-
-Desplegar aplicación en Railway
+Despliegue de aplicación en Railway
